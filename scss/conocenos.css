@@ -741,6 +741,12 @@ img {
   background-color: rgba(12, 10, 10, 0.1);
   color: rgba(12, 10, 10, 0.7);
 }
+#headerSample .menu .menu__list .active {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#headerSample .menu .menu__list .active a {
+  color: #fff;
+}
 #headerSample .menu.menuActive {
   transform: translateX(0);
 }
@@ -1251,7 +1257,7 @@ footer .footer .footer__item:nth-child(4) a {
   display: block;
   margin-bottom: 8px;
   text-decoration: none;
-  color: #123;
+  color: #20304d;
   font-size: 1.1rem;
   text-decoration: underline;
 }
@@ -1530,6 +1536,7 @@ footer .copy .texto {
   #headerSample .menu .menu__list .menu-item {
     text-decoration: none;
     margin: 0;
+    position: static;
     width: auto;
     height: 100%;
     border-top: none;
@@ -1554,26 +1561,9 @@ footer .copy .texto {
     background-color: transparent;
     color: rgba(12, 10, 10, 0.7);
   }
-  #headerSample .menu .menu__list .menu-item:hover::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: rgba(32, 48, 77, 0.4);
-    border-radius: 10px;
-    animation-name: spaceBar;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-  }
-  @keyframes spaceBar {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 100%;
-    }
+  #headerSample .menu .menu__list .active {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(17, 34, 51, 0.6);
   }
   #headerSample .menu.menuActive {
     transform: translateX(0);
@@ -1726,7 +1716,7 @@ footer .copy .texto {
     display: block;
     margin-bottom: 8px;
     text-decoration: none;
-    color: #123;
+    color: rgb(25, 110, 170);
     font-size: 1.1rem;
     text-decoration: underline;
   }

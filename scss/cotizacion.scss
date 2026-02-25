@@ -1,0 +1,157 @@
+@import 'index';
+@import 'conocenos';
+@import 'catalogo';
+
+
+.content-primary {
+    .content-primary-item {
+        .max-titulo {
+            text-align: center;
+            background-color: $color__azul;
+            color: $color__blanco;
+            font-weight: bold;
+            font-size: 2.3rem;
+            margin: 20px auto;
+            padding: 5px;
+            line-height: 50px;
+        }
+        .texto {
+            padding: 5px;
+            font-family: sans-serif;
+        }
+        .option {
+             @include flex-layout(center, start, center, column, nowrap, 10px);
+             width: 100%;
+                .option-item {
+                    width: 100%;
+                    text-align: center;
+                    i {
+                        font-size: 3rem;
+                        color: $color__azul;
+                        display: block;
+                        margin: 14px auto;
+                    }
+                    .sub-titulo {
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        padding: 5px;
+                    }
+                }
+        }
+        .price {
+            width: 100%;
+            margin: auto;
+            padding: 5px;
+            form {
+                width: 100%;
+                margin: auto;
+                fieldset {
+                    width: 100%;
+                    margin: 35px auto;
+                    padding: 10px;
+                    border: 1px solid #0004;
+                    legend {
+                        float: none;
+                        width: auto;
+                        padding: 3px;
+                        background-color: rgba($color__azul, 0.9);
+                        color: $color__blanco;
+                    }
+                    label {
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                        margin-top: 7px;
+                        margin-bottom: 10px;
+                        width: 100%;
+                    }
+                    input, select {
+                        width: 100%;
+                        max-width: 700px;
+                        padding: 5px;     
+                        border: none;                   
+                         border-bottom: 1px solid $color__negro;
+                        margin-bottom: 10px;
+                        transition: all .3s;
+                    }
+                    input::placeholder, select::placeholder {
+                        padding: 0;
+                        color: #0003;
+                        text-align: start;
+                        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    }
+                    input:focus, select:focus {
+                        outline: none;
+                        border-bottom: 1px solid $color__azul--cajas;
+                    } 
+                    
+            }
+            button {
+                display: block;
+                width: fit-content;
+                margin: auto;
+                background-color: rgba($color__azul--cajas, 0.9);
+                color: $color__blanco;
+                padding: 3px 10px;
+                border: none;
+                cursor: pointer;
+                transition: background-color .3s;
+                &:hover {
+                    background-color: #16243c;
+                }
+            }
+        }
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+.content-primary {
+    .content-primary-item {
+        .option {
+            @include flex-layout(center, start, center, row, wrap, 10px);
+            .option-item {
+                width: 30%;
+            }
+        }
+                .price {
+            form {
+                fieldset {
+                .price-container {
+                    @include flex-layout(center, start, center, row, wrap, 10px);
+                    align-content: start;
+                    .price-item {
+                        height: 100%;
+                        width: 45%;
+                        padding: 10px;
+                        
+                    }
+                }                    
+            }
+            button {
+                display: block;
+                width: fit-content;
+                margin: auto;
+                background-color: rgba($color__azul--cajas, 0.9);
+                color: $color__blanco;
+                padding: 3px 10px;
+                border: none;
+                cursor: pointer;
+                transition: background-color .3s;
+                &:hover {
+                    background-color: #16243c;
+                }
+            }
+        }
+        }
+    }
+}
+}
+@media screen and (min-width: 1024px) {
+#main {
+
+}
+}
+@media screen and (min-width: 1600px) {
+
+}
