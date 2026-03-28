@@ -67,6 +67,21 @@
         <div class="arrowIndex">
           <a href="#welcome"><i class="fa-solid fa-angle-up"></i></a>
         </div>
+        <div class="whatsapp-floating-container">
+    <div class="whatsapp-tooltip" id="whatsapp-tooltip">
+        Contactame si necesitas una orientación
+    </div>
+
+    <a href="https://api.whatsapp.com/send?phone=526611223344&text=Hola%20Aceites%20Carol,%20necesito%20orientación." 
+       class="whatsapp-btn-circular" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       title="Chatea con nosotros">
+        <svg class="whatsapp-icon" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L3 480l112.5-29.5c32.9 17.9 69 27.3 108.4 27.3H224c122.4 0 222-99.6 222-222 0-59.3-23.1-115.1-65.1-115.1zm-157 336.3h-.2c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 54 81.2 54.1 130.5 0 101.7-82.8 184.5-184.6 184.5zm100.5-138c-5.5-2.8-32.6-16.1-37.7-17.9-5.1-1.8-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.3-16.3-14.6-27.4-32.7-30.6-38.2-3.2-5.5-.3-8.5 2.5-11.2 2.5-2.6 5.5-6.5 8.3-9.7 1.8-2.3 2.8-4.2 4.2-7 1.4-2.8.7-5.1-.3-7-1-1.9-8.8-21.2-12.1-29.2-3.1-7.7-6.2-6.6-8.8-6.7-2.2-.1-4.8-.1-7.4-.1-2.6 0-6.9 1-10.5 4.8-3.7 3.8-14.1 13.8-14.1 33.8 0 20 14.5 39.3 16.5 42 2 2.8 28.5 43.5 69.1 61 9.7 4.2 17.3 6.7 23.2 8.6 9.8 3.1 18.7 2.7 25.7 1.6 7.8-1.2 23.8-9.7 27.2-19.1 3.4-9.3 3.4-17.3 2.4-19.1-1-1.9-3.7-2.8-9.2-5.6z"></path>
+        </svg>
+    </a>
+    </div>
 <body>
     <header id="headerSample" class="container">
         <div class="logo">
@@ -115,16 +130,21 @@
         <div class="content-primary">
          <div class="content-primary-item">
         <section class="catalog">
-            <div class="catalog__nav">
+            <!-- <div class="catalog__nav">
                 <a href="">Gasolina / multigrado</a>
                 <a href="">Motores Diésel</a>
                 <a href="">Hidráulicos</a>
                 <a href="">Anticongelante</a>
-            </div>
-            <div class="catalog__search">
-                <input type="text" placeholder="Buscar producto...">
-                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
+            </div> -->
+           <div class="search-container">
+    <div class="search-box">
+        <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+        <input type="search" id="catalog-search" placeholder="Busca por marca, viscosidad o aplicación (Ej. Mobil, 15W40, Hidráulico)..." onkeyup="filterCatalog()">
+    </div>
+    <p id="search-fallback" style="display: none; text-align: center; margin-top: 20px; color: #d9534f; font-weight: bold;">
+        ❌ No se encontraron aceites que coincidan con tu búsqueda.
+    </p>
+</div>
         </section>
 
         <section class="products__grid" id="welcome">
@@ -226,7 +246,7 @@
                             <p class="texto">El lubricante original diseñado por los ingenieros de <strong>Volkswagen, Audi y SEAT</strong>. Formulado específicamente para motores de alto desempeño que requieren la norma VW 502 00 / 505 00. Máxima compatibilidad y protección garantizada por el fabricante.</p>
                            <div class="products-item-btn">
                              <a href="ACEITE-AUTENTICO-GENUINO-AUDI-SEAT-VW-5W40/" class="btn">Ver</a>
-                            <a href="ACEITE-AUTENTICO-GENUINO-AUDI-SEAT-VW-5W40/" class="btn">Ficha Técnica</a>
+                            <!-- <a href="ACEITE-AUTENTICO-GENUINO-AUDI-SEAT-VW-5W40/" class="btn">Ficha Técnica</a> -->
                            </div>
                         </div>                        
                     </article>
@@ -248,7 +268,7 @@
                             <p class="texto">El lubricante oficial desarrollado para cumplir con los estándares exactos de la ingeniería Nissan. Su avanzada tecnología sintética garantiza un arranque suave, mayor ahorro de combustible y una limpieza profunda del motor bajo cualquier condición de manejo.</p>
                            <div class="products-item-btn">
                              <a href="NISSAN-5W30/" class="btn">Ver</a>
-                            <a href="NISSAN-5W30/AS-XX-Nissan-5W30.pdf" download="Ficha Técnica - Nissan-5W30" class="btn">Ficha Técnica</a>
+                            <!-- <a href="NISSAN-5W30/AS-XX-Nissan-5W30.pdf" download="Ficha Técnica - Nissan-5W30" class="btn">Ficha Técnica</a> -->
                            </div>
                         </div>                        
                     </article>
@@ -260,7 +280,7 @@
                             <p class="texto">Protección avanzada para motores modernos a gasolina. <strong>Motor Nation 5W-30</strong> Sintético ofrece una lubricación superior desde el arranque, maximizando la eficiencia de combustible y manteniendo el motor libre de depósitos bajo condiciones extremas</p>
                            <div class="products-item-btn">
                              <a href="MOTOR-NATION-5W30/" class="btn">Ver</a>
-                            <a href="MOTOR-NATION-5W30/AS-XX-Motor-Nation-5W30.pdf" download="Ficha Técnica - Motor Nation 5W30" class="btn">Ficha Técnica</a>
+                            <!-- <a href="MOTOR-NATION-5W30/AS-XX-Motor-Nation-5W30.pdf" download="Ficha Técnica - Motor Nation 5W30" class="btn">Ficha Técnica</a> -->
                            </div>
                         </div>                        
                     </article>
@@ -272,7 +292,7 @@
                             <p class="texto">Excelente estabilidad térmica y protección contra la fricción. <strong>Mobil ATF D/M</strong> está diseñado para transmisiones automáticas que requieren la especificación <strong>Dexron III o Mercon</strong>, garantizando cambios de marcha suaves y una larga vida útil de la transmisión.</p>
                            <div class="products-item-btn">
                              <a href="MOBIL-ATF-DM/" class="btn">Ver</a>
-                            <a href="MOBIL-ATF-DM/AS-XX-Mobil-ATF-DM.pdf" download="Ficha Técnica - Mobil ATF D/M" class="btn">Ficha Técnica</a>
+                            <a href="MOBIL-ATF-DM/GL-XX-Mobil-ATF-DM.pdf" download="Ficha Técnica - Mobil ATF D/M" class="btn">Ficha Técnica</a>
                            </div>
                         </div>                        
                     </article>
@@ -305,7 +325,7 @@
                             <p class="texto">El estándar de oro en lubricación hidráulica. <strong>Mobil DTE 25</strong> ofrece un equilibrio perfecto entre fluidez y protección, diseñado para mantener la máxima eficiencia en bombas, válvulas y actuadores sometidos a regímenes de trabajo pesado</p>
                            <div class="products-item-btn">
                              <a href="MOBIL-DTE25-ISO-46/" class="btn">Ver</a>
-                            <a href="MOBIL-DTE25-ISO-46/GL-XX-Mobil-DTE-25-ISO-46.pdf" download="Ficha Técnica - Mobil DTE25 ISO 46" class="btn">Ficha Técnica</a>
+                            <!-- <a href="MOBIL-DTE25-ISO-46/GL-XX-Mobil-DTE-25-ISO-46.pdf" download="Ficha Técnica - Mobil DTE25 ISO 46" class="btn">Ficha Técnica</a> -->
                            </div>
                         </div>                        
                     </article>
@@ -328,7 +348,7 @@
                             <p class="texto">Protección confiable al mejor costo. Los aceites <strong>Disperlub Monogrado</strong> están formulados para motores que requieren una viscosidad estable, ofreciendo una limpieza efectiva y una resistencia sólida contra el desgaste en jornadas de trabajo constante.</p>
                            <div class="products-item-btn">
                              <a href="DISPERLUB-MONOGRADO-SAE-40-50/" class="btn">Ver</a>
-                            <a href="DISPERLUB-MONOGRADO-SAE-40-50/Ficha-Tecnica-DISPERLUB-MONOGRADO-SAE-40-50.pdf" download="Ficha Técnica - Disperlub Monogrado SAE 40/50" class="btn">Ficha Técnica</a>
+                            <a href="disperlub/Disperlub - Transmisiones automaticas.pdf" download="Ficha Técnica - Disperlub Monogrado SAE 40/50" class="btn">Ficha Técnica</a>
                            </div>
                         </div>                        
                     </article>
@@ -339,7 +359,7 @@
                             <p class="texto">Protección avanzada para motores a gasolina modernos. El <strong>Disperlub 15W-40 SN</strong> combina la versatilidad de un aceite multigrado con tecnología de aditivos que reduce la fricción, mantiene la limpieza del motor y prolonga la vida útil del convertidor catalítico.</p>
                            <div class="products-item-btn">
                              <a href="DISPERLUB-MULTIGRADO-GASOLINA-15W40-SN/" class="btn">Ver</a>
-                            <a href="DISPERLUB-MULTIGRADO-GASOLINA-15W40-SN/Ficha-Tecnica-DISPERLUB-MULTIGRADO-GASOLINA-15W40-SN.pdf" download="Ficha Técnica - Disperlub Multigrado Gasolina 15W40 SN" class="btn">Ficha Técnica</a>
+                            <a href="disperlub/Disperlub Multigrado - Gasolina - Ficha Técnica.pdf" download="Ficha Técnica - Disperlub Multigrado Gasolina 15W40 SN" class="btn">Ficha Técnica</a>
                            </div>
                         </div>                        
                     </article>
@@ -350,7 +370,7 @@
                             <p class="texto">Máxima protección para motores con alto kilometraje. Los aceites Disperlub 20W-50 y 25W-50 SN ofrecen una película lubricante extra resistente que reduce el consumo de aceite, mejora la compresión y protege los componentes internos en motores de alto desgaste.</p>
                            <div class="products-item-btn">
                              <a href="DISPERLUB-MULTIGRADO-GASOLINA-20W50-25W50-SN/" class="btn">Ver</a>
-                            <a href="DISPERLUB-MULTIGRADO-GASOLINA-20W50-25W50-SN/Ficha-Tecnica-DISPERLUB-MULTIGRADO-GASOLINA-20W50-25W50-SN.pdf" download="Ficha Técnica - Disperlub Multigrado Gasolina 20W50/25W50 SN" class="btn">Ficha Técnica</a>
+                            <a href="disperlub/Disperlub Multigrado - Gasolina - Ficha Técnica.pdf" download="Ficha Técnica - Disperlub Multigrado Gasolina 20W50/25W50 SN" class="btn">Ficha Técnica</a>
                            </div>
                         </div>                        
                     </article>
@@ -361,7 +381,7 @@
                             <p class="texto">Protección tenaz para el trabajo pesado. <strong>Disperlub Diesel 15W-40</strong> es un aceite multigrado de alto rendimiento que mantiene el motor limpio y protegido contra la corrosión, ideal para camiones de carga, autobuses y maquinaria agrícola.</p>
                            <div class="products-item-btn">
                              <a href="DISPERLUB-DIESEL-15W40/" class="btn">Ver</a>
-                            <a href="DISPERLUB-DIESEL-15W40/Ficha-Tecnica-DISPERLUB-DIESEL-15W40.pdf" download="Ficha Técnica - Disperlub Diesel 15W40" class="btn">Ficha Técnica</a>
+                            <a href="disperlub/Disperlub Multigrado - Gasolina - Ficha Técnica.pdf" download="Ficha Técnica - Disperlub Diesel 15W40" class="btn">Ficha Técnica</a>
                            </div>
                         </div>                        
                     </article>
@@ -372,7 +392,7 @@
                             <p class="texto">El especialista en motores diésel con alto recorrido. Gracias a su viscosidad reforzada, el <strong>Disperlub 25W-50</strong> reduce el consumo de aceite y protege los componentes internos en motores que trabajan bajo temperaturas críticas y cargas pesadas.</p>
                            <div class="products-item-btn">
                              <a href="DISPERLUB-DIESEL-25W50/" class="btn">Ver</a>
-                            <a href="DISPERLUB-DIESEL-25W50/Ficha-Tecnica-DISPERLUB-DIESEL-25W50.pdf" download="Ficha Técnica - Disperlub Diesel 25W50" class="btn">Ficha Técnica</a>
+                            <a href="disperlub/Disperlub Multigrado - Gasolina - Ficha Técnica.pdf" download="Ficha Técnica - Disperlub Diesel 25W50" class="btn">Ficha Técnica</a>
                            </div>
                         </div>                        
                     </article>
@@ -383,7 +403,7 @@
                             <p class="texto">Lo mejor de dos mundos. Disperlub Semisintético ofrece una protección superior contra el desgaste en el arranque y una estabilidad térmica mejorada, ideal para motores modernos a gasolina que buscan eficiencia y limpieza excepcional.</p>
                            <div class="products-item-btn">
                              <a href="DISPERLUB-SEMISINTETICO-10W30-10W40/" class="btn">Ver</a>
-                            <a href="DISPERLUB-SEMISINTETICO-10W30-10W40/Ficha-Tecnica-DISPERLUB-SEMISINTETICO-10W30-10W40.pdf" download="Ficha Técnica - Disperlub Semisintético 10W30/10W40" class="btn">Ficha Técnica</a>
+                            <a href="disperlub/Disperlub Sintetico - Ficha Técnica.pdf" download="Ficha Técnica - Disperlub Semisintético 10W30/10W40" class="btn">Ficha Técnica</a>
                            </div>
                         </div>                        
                     </article>
@@ -394,7 +414,7 @@
                             <p class="texto">Protección total y rendimiento extremo. Formulado con bases 100% sintéticas, este lubricante ofrece una resistencia inigualable contra el calor, garantiza arranques instantáneos y mantiene el motor como nuevo por mucho más tiempo.</p>
                            <div class="products-item-btn">
                              <a href="DISPERLUB-SINTETICO-5W30-5W40/" class="btn">Ver</a>
-                            <a href="DISPERLUB-SINTETICO-5W30-5W40/Ficha-Tecnica-DISPERLUB-SINTETICO-5W30-5W40.pdf" download="Ficha Técnica - Disperlub Sintético 5W30/5W40" class="btn">Ficha Técnica</a>
+                            <a href="disperlub/Disperlub Sintetico - Ficha Técnica.pdf" download="Ficha Técnica - Disperlub Sintético 5W30/5W40" class="btn">Ficha Técnica</a>
                            </div>
                         </div>                        
                     </article>
@@ -405,7 +425,7 @@
                             <p class="texto">Fluidez y protección superiores para su transmisión. Disperlub ATF Dexron III está formulado para garantizar cambios de marcha suaves, proteger contra el desgaste y prolongar la vida útil de los sistemas de dirección hidráulica y transmisiones automáticas.</p>
                            <div class="products-item-btn">
                              <a href="DISPERLUB-TRANSMISION-AUTOMATICA-ATF-DEXRON-III/" class="btn">Ver</a>
-                            <a href="DISPERLUB-TRANSMISION-AUTOMATICA-ATF-DEXRON-III/Ficha-Tecnica-DISPERLUB-TRANSMISION-AUTOMATICA-ATF-DEXRON-III.pdf" download="Ficha Técnica - Disperlub Transmisión Automática ATF DEXRON III" class="btn">Ficha Técnica</a>
+                            <a href="disperlub/Disperlub - Transmisiones automaticas.pdf" download="Ficha Técnica - Disperlub Transmisión Automática ATF DEXRON III" class="btn">Ficha Técnica</a>
                            </div>
                         </div>                        
                     </article>
@@ -416,7 +436,7 @@
                             <p class="texto">Máxima resistencia para engranajes sometidos a carga pesada. El <strong>Disperlub SAE 140</strong> proporciona una película lubricante de alta viscosidad que protege contra el desgaste, reduce el ruido y soporta las presiones más exigentes en climas cálidos y trabajo severo.</p>
                            <div class="products-item-btn">
                              <a href="DISPERLUB-TRANSMISION-STANDAR-140/" class="btn">Ver</a>
-                            <a href="DISPERLUB-TRANSMISION-STANDAR-140/Ficha-Tecnica-DISPERLUB-TRANSMISION-STANDAR-140.pdf" download="Ficha Técnica - Disperlub Transmisión Estándar 140" class="btn">Ficha Técnica</a>
+                            <a href="disperlub/Disperlub - Transmisiones automaticas.pdf" download="Ficha Técnica - Disperlub Transmisión Estándar 140" class="btn">Ficha Técnica</a>
                            </div>
                         </div>                        
                     </article>
@@ -427,7 +447,7 @@
                             <p class="texto">Máxima protección en condiciones extremas. El <strong>Disperlub 85W-140</strong> combina fluidez en el arranque con una película de aceite ultra resistente para proteger diferenciales y transmisiones manuales sometidas a cargas pesadas y altas temperaturas.</p>
                            <div class="products-item-btn">
                              <a href="DISPERLUB-TRANSMISION-STANDAR-85-140/" class="btn">Ver</a>
-                            <a href="DISPERLUB-TRANSMISION-STANDAR-85-140/Ficha-Tecnica-DISPERLUB-TRANSMISION-STANDAR-85-140.pdf" download="Ficha Técnica - Disperlub Transmisión Estándar 85/140" class="btn">Ficha Técnica</a>
+                            <a href="disperlub/Disperlub - Transmisiones automaticas.pdf" download="Ficha Técnica - Disperlub Transmisión Estándar 85/140" class="btn">Ficha Técnica</a>
                            </div>
                         </div>                        
                     </article>
@@ -438,7 +458,7 @@
                             <p class="texto">Máxima eficiencia hidráulica al mejor costo. Los fluidos Disperlub Hidráulico están diseñados con aceites base de alta pureza y aditivos antidesgaste (AW) para proteger bombas y actuadores en sistemas industriales y maquinaria móvil de servicio pesado.</p>
                            <div class="products-item-btn">
                              <a href="DISPERLUB-HIDRAULICO-H300-ISO68-ISO46/" class="btn">Ver</a>
-                            <a href="DISPERLUB-HIDRAULICO-H300-ISO68-ISO46/Ficha-Tecnica-DISPERLUB-HIDRAULICO-H300-ISO68-ISO46.pdf" download="Ficha Técnica - Disperlub Hidráulico H300/ISO68/ISO 46 import" class="btn">Ficha Técnica</a>
+                            <a href="DISPERLUB-HIDRAULICO-H300-ISO68-ISO46/Disperlub - Hidraulico H300 ISO 68.pdf" download="Ficha Técnica - Disperlub Hidráulico H300/ISO68/ISO 46 import" class="btn">Ficha Técnica</a>
                            </div>
                         </div>                        
                     </article>
@@ -450,7 +470,7 @@
                             <p class="texto">Protección de última generación para motores diésel de alto rendimiento. Con tecnología CK-4, este lubricante ofrece una resistencia superior a la oxidación y protege los sistemas de bajas emisiones (DPF y SCR), extendiendo los intervalos de drenado y la vida útil del motor.</p>
                            <div class="products-item-btn">
                              <a href="MOBIL-DELVAC-MODERN-15W40-CK4-PLUS/" class="btn">Ver</a>
-                            <a href="MOBIL-DELVAC-MODERN-15W40-CK4-PLUS/Ficha-Tecnica-MOBIL-DELVAC-MODERN-15W40-CK4-PLUS.pdf" download="Ficha Técnica - Mobil Delvac Modern 15W40 CK-4 PLUS" class="btn">Ficha Técnica</a>
+                            <a href="MOBIL-DELVAC-MODERN-15W40-CK4-PLUS/Mobil Delvac Modern 15w-40.pdf" download="Ficha Técnica - Mobil Delvac Modern 15W40 CK-4 PLUS" class="btn">Ficha Técnica</a>
                            </div>
                         </div>                        
                     </article>
@@ -472,7 +492,7 @@
                             <p class="texto">Rendimiento legendario y protección extrema. <strong>Chevron Delo 400 SDE</strong> está diseñado para flotas modernas que exigen el máximo control de emisiones y una durabilidad inigualable del motor, ofreciendo hasta un 35% más de control de oxidación que los estándares de la industria.</p>
                            <div class="products-item-btn">
                              <a href="CHEVRON-DELO-15W40-CK4/" class="btn">Ver</a>
-                            <a href="CHEVRON-DELO-15W40-CK4/" download="Ficha Técnica - Chevron Delo 15W40 CK-4" class="btn">Ficha Técnica</a>
+                            <a href="CHEVRON-DELO-15W40-CK4/Chevron Delo400XLESBSAE15W_40.pdf" download="Ficha Técnica - Chevron Delo 15W40 CK-4" class="btn">Ficha Técnica</a>
                            </div>
                         </div>                        
                     </article>
@@ -483,7 +503,7 @@
                             <p class="texto">Protección versátil para flotas modernas. <strong>Chevron Ursa Super Plus EC</strong> es un lubricante de alto rendimiento diseñado para motores diésel de servicio pesado, optimizando el control de depósitos y garantizando la compatibilidad con sistemas de bajas emisiones (DPF).</p>
                            <div class="products-item-btn">
                              <a href="CHEVRON-URSA-SUPER-PLUS-EC-15W40/" class="btn">Ver</a>
-                            <a href="CHEVRON-URSA-SUPER-PLUS-EC-15W40/" download="Ficha Técnica - Chevron Ursa Super Plus EC 15W-40" class="btn">Ficha Técnica</a>
+                            <a href="CHEVRON-URSA-SUPER-PLUS-EC-15W40/Chevron ursa super plus ec 15w40.pdf" download="Ficha Técnica - Chevron Ursa Super Plus EC 15W-40" class="btn">Ficha Técnica</a>
                            </div>
                         </div>                        
                     </article>
@@ -494,7 +514,7 @@
                             <p class="texto">Máximo cuerpo y sello para motores con alto recorrido. <strong>El Ursa HD AK 25W-60</strong> proporciona una película lubricante ultra-robusta que compensa el desgaste interno, recupera la presión de aceite y protege los motores diésel de servicio pesado en las condiciones más severas.</p>
                            <div class="products-item-btn">
                              <a href="CHEVRON-URSA-HD-AK-25W60/" class="btn">Ver</a>
-                            <a href="CHEVRON-URSA-HD-AK-25W60/" download="Ficha Técnica - Chevron Ursa HD AK 25W-60" class="btn">Ficha Técnica</a>
+                            <a href="CHEVRON-URSA-HD-AK-25W60/Chevron ursa hd ak 25w60.pdf" download="Ficha Técnica - Chevron Ursa HD AK 25W-60" class="btn">Ficha Técnica</a>
                            </div>
                         </div>                        
                     </article>
@@ -505,7 +525,7 @@
                             <p class="texto">EEl estándar de confianza para su motor. <strong>Mobil Super 20W-50</strong> es un aceite mineral de alta calidad diseñado para combatir el desgaste y la formación de lodos, manteniendo el motor limpio y protegido bajo las condiciones de manejo del día a día.</p>
                            <div class="products-item-btn">
                              <a href="MOBIL-MULTIGRADO-20W50-GASOLINA/" class="btn">Ver</a>
-                            <a href="MOBIL-MULTIGRADO-20W50-GASOLINA/" download="Ficha Técnica - Mobil Multigrado 20W-50 (Gasolina)" class="btn">Ficha Técnica</a>
+                            <a href="MOBIL-MULTIGRADO-20W50-GASOLINA/MOBIL-MULTIGRADO 20w50.pdf" download="Ficha Técnica - Mobil Multigrado 20W-50 (Gasolina)" class="btn">Ficha Técnica</a>
                            </div>
                         </div>                        
                     </article>
@@ -517,7 +537,7 @@
                             <p class="texto">Equilibrio ideal entre protección y eficiencia. El Disperlub 15W-40 para motores a gasolina ofrece un arranque suave en frío y una estabilidad térmica excepcional, manteniendo el motor limpio de depósitos y lodos bajo cualquier condición de manejo.</p>
                            <div class="products-item-btn">
                              <a href="DISPERLUB-MULTIGRADO-GASOLINA-15W40/" class="btn">Ver</a>
-                            <a href="DISPERLUB-MULTIGRADO-GASOLINA-15W40/" download="Ficha Técnica - Disperlub Multigrado 15W-40 (Gasolina)" class="btn">Ficha Técnica</a>
+                            <a href="disperlub/Disperlub Multigrado - Gasolina - Ficha Técnica.pdf" download="Ficha Técnica - Disperlub Multigrado 15W-40 (Gasolina)" class="btn">Ficha Técnica</a>
                            </div>
                         </div>                        
                     </article>
@@ -528,7 +548,7 @@
                             <p class="texto">Máximo sello y protección para motores con recorrido. Los aceites <strong>Disperlub 20W-50 y 25W-50</strong> están diseñados para reducir el consumo de lubricante, mejorar la compresión y proporcionar una marcha más silenciosa en motores con desgaste moderado a severo.</p>
                            <div class="products-item-btn">
                              <a href="DISPERLUB-MULTIGRADO-ALTO-KILOMETRAJE-20W50-25W50/" class="btn">Ver</a>
-                            <a href="DISPERLUB-MULTIGRADO-ALTO-KILOMETRAJE-20W50-25W50/" download="Ficha Técnica - Disperlub Multigrado Alto Kilometraje 20W-50 / 25W-50" class="btn">Ficha Técnica</a>
+                            <a href="disperlub/Disperlub Multigrado - Gasolina - Ficha Técnica.pdf" download="Ficha Técnica - Disperlub Multigrado Alto Kilometraje 20W-50 / 25W-50" class="btn">Ficha Técnica</a>
                            </div>
                         </div>                        
                     </article>
@@ -539,7 +559,7 @@
                             <p class="texto">Poder y resistencia para el trabajo pesado. Los aceites Disperlub Diesel están formulados para soportar las altas presiones de motores turbo-cargados, garantizando una limpieza interna superior y una protección total contra el desgaste abrasivo causado por el hollín.</p>
                            <div class="products-item-btn">
                              <a href="DISPERLUB-DIESEL-HEAVY-DEUTY-SERIE-MULTIGRADO-15W40-25W50/" class="btn">Ver</a>
-                            <a href="DISPERLUB-DIESEL-HEAVY-DEUTY-SERIE-MULTIGRADO-15W40-25W50/" download="Ficha Técnica - Disperlub Diesel Heavy Duty 15W-40 / 25W-50" class="btn">Ficha Técnica</a>
+                            <a href="disperlub/Disperlub Multigrado - Gasolina - Ficha Técnica.pdf" download="Ficha Técnica - Disperlub Diesel Heavy Duty 15W-40 / 25W-50" class="btn">Ficha Técnica</a>
                            </div>
                         </div>                        
                     </article>
@@ -550,7 +570,7 @@
                             <p class="texto">Confiabilidad probada para motores de trabajo continuo. Los aceites Disperlub Monogrados ofrecen una excelente estabilidad térmica y una película lubricante resistente, ideales para motores que operan en condiciones de temperatura constante o que requieren un aceite de alta densidad.</p>
                            <div class="products-item-btn">
                              <a href="DISPERLUB-MONOGRADE-SAE-40-SAE-50-PROTECCION-ROBUSTA-Y-TRADICIONAL/" class="btn">Ver</a>
-                            <a href="DISPERLUB-MONOGRADE-SAE-40-SAE-50-PROTECCION-ROBUSTA-Y-TRADICIONAL/" download="Ficha Técnica - Disperlub™ Monogrado SAE 40 / SAE 50 – Protección Robusta y Tradicional" class="btn">Ficha Técnica</a>
+                            <a href="disperlub/Disperlub Multigrado - Gasolina - Ficha Técnica.pdf" download="Ficha Técnica - Disperlub™ Monogrado SAE 40 / SAE 50 – Protección Robusta y Tradicional" class="btn">Ficha Técnica</a>
                            </div>
                         </div>                        
                     </article>
@@ -561,7 +581,7 @@
                             <p class="texto">Protección híbrida de alto nivel. Disperlub Semisintético combina la fluidez de las bases sintéticas con la resistencia de los minerales premium, garantizando arranques rápidos, mayor limpieza del motor y un ahorro notable de combustible.</p>
                            <div class="products-item-btn">
                              <a href="DISPERLUB-SEMISINTETICO-TECNOLOGIA-DE-FLUJO-AVANZADO-10W30-10W40/" class="btn">Ver</a>
-                            <a href="DISPERLUB-SEMISINTETICO-TECNOLOGIA-DE-FLUJO-AVANZADO-10W30-10W40/ficha-tecnica.pdf" download="Ficha Técnica - Disperlub™ Semisintético – Tecnología de Flujo Avanzado (10W-30 / 10W-40)" class="btn">Ficha Técnica</a>
+                            <a href="disperlub/Disperlub Sintetico - Ficha Técnica.pdf" download="Ficha Técnica - Disperlub™ Semisintético – Tecnología de Flujo Avanzado (10W-30 / 10W-40)" class="btn">Ficha Técnica</a>
                            </div>
                         </div>                        
                     </article>
@@ -572,7 +592,7 @@
                             <p class="texto">La protección definitiva para el motor moderno. Formulado con bases 100% sintéticas, este lubricante ofrece una resistencia inigualable al calor, limpieza extrema y un rendimiento superior en las condiciones más exigentes de alta velocidad o tráfico intenso</p>
                            <div class="products-item-btn">
                              <a href="DISPERLUB-FULL-SYNTHETIC-MAXIMA-INGENIERIA-LUBRICACION/" class="btn">Ver</a>
-                            <a href="DISPERLUB-FULL-SYNTHETIC-MAXIMA-INGENIERIA-LUBRICACION/ficha-tecnica.pdf" download="Ficha Técnica - Disperlub™ Full Synthetic – Máxima Ingeniería en Lubricación" class="btn">Ficha Técnica</a>
+                            <a href="disperlub/Disperlub Sintetico - Ficha Técnica.pdf" download="Ficha Técnica - Disperlub™ Full Synthetic – Máxima Ingeniería en Lubricación" class="btn">Ficha Técnica</a>
                            </div>
                         </div>                        
                     </article>
@@ -583,7 +603,7 @@
                             <p class="texto">Fluidez y protección superiores para su transmisión. <strong>Disperlub ATF Dexron III</strong> está formulado para garantizar cambios de marcha suaves, proteger contra el desgaste y prolongar la vida útil de los sistemas de dirección hidráulica y transmisiones automáticas.</p>
                            <div class="products-item-btn">
                              <a href="DISPERLUB-ATF-DEXRON-III-MERCON/" class="btn">Ver</a>
-                            <a href="../../docs/ficha_tecnica_disperlub_atf.pdf" download="Ficha Técnica - Disperlub™ ATF Dexron III / Mercon" class="btn">Ficha Técnica</a>
+                            <a href="disperlub/Disperlub - Transmisiones automaticas.pdf" download="Ficha Técnica - Disperlub™ ATF Dexron III / Mercon" class="btn">Ficha Técnica</a>
                            </div>
                         </div>                        
                     </article>
@@ -594,7 +614,7 @@
                             <p class="texto">Fuerza y durabilidad para el trabajo pesado. El <strong>Disperlub 85W-140</strong> ofrece una protección excepcional contra la extrema presión, garantizando una película lubricante ultra-robusta que protege los engranajes hipoidales del desgaste, incluso en las condiciones más severas de carga y temperatura.</p>
                            <div class="products-item-btn">
                              <a href="DISPERLUB-GEAR-OIL-85W140/" class="btn">Ver</a>
-                            <a href="../../docs/ficha_tecnica_disperlub_gear_oil_85w140.pdf" download="Ficha Técnica - Disperlub™ Gear Oil 85W-140" class="btn">Ficha Técnica</a>
+                            <a href="disperlub/Disperlub Multigrado - Gasolina - Ficha Técnica.pdf" download="Ficha Técnica - Disperlub™ Gear Oil 85W-140" class="btn">Ficha Técnica</a>
                            </div>
                         </div>                        
                     </article>
@@ -605,7 +625,7 @@
                             <p class="texto">Máximo cuerpo y sello para engranajes pesados. El Disperlub SAE 140 es un aceite de alta viscosidad con aditivos de Extrema Presión (EP), ideal para diferenciales y cajas de velocidades manuales que exigen una protección robusta contra el desgaste y la fricción.</p>
                            <div class="products-item-btn">
                              <a href="DISPERLUB-GEAR-OIL-SAE-140/" class="btn">Ver</a>
-                            <a href="../../docs/ficha_tecnica_disperlub_gear_oil_sae_140.pdf" download="Ficha Técnica - Disperlub™ Gear Oil SAE 140" class="btn">Ficha Técnica</a>
+                            <a href="disperlub/Disperlub - Transmisiones automaticas.pdf" download="Ficha Técnica - Disperlub™ Gear Oil SAE 140" class="btn">Ficha Técnica</a>
                            </div>
                         </div>                        
                     </article>
@@ -616,7 +636,7 @@
                             <p class="texto">Eficiencia hidráulica de alta precisión. Los aceites Disperlub Hidráulico AW están formulados con aditivos antidesgaste de última generación para proteger bombas de alta presión y componentes críticos en sistemas industriales y maquinaria pesada.</p>
                            <div class="products-item-btn">
                              <a href="DISPERLUB-HIDRAULICO-AW-SERIE-INDUSTRIAL-ISO-46-ISO-68/" class="btn">Ver</a>
-                            <a href="../../docs/ficha_tecnica_disperlub_hidraulico_aw_serie_industrial_iso_46_iso_68.pdf" download="Ficha Técnica - Disperlub™ Hidráulico AW – Serie Industrial (ISO 46 / ISO 68)" class="btn">Ficha Técnica</a>
+                            <a href="disperlub/Disperlub Multigrado - Gasolina - Ficha Técnica.pdf" download="Ficha Técnica - Disperlub™ Hidráulico AW – Serie Industrial (ISO 46 / ISO 68)" class="btn">Ficha Técnica</a>
                            </div>
                         </div>                        
                     </article>
@@ -627,8 +647,8 @@
                             <h3 class="sub-titulo">Disperlub™ Anticongelante y Refrigerante Amarillo – Heavy Duty (Larga Duración)</h3>
                             <p class="texto">Protección total para sistemas de enfriamiento de servicio pesado. Formulado para resistir temperaturas extremas, este refrigerante evita la corrosión, la cavitación y el sobrecalentamiento en motores diésel y gasolina de alto rendimiento.</p>
                            <div class="products-item-btn">
-                             <a href="DISPERLUB-ANTICONGELANTE-REFRIGERANTE-AMARILLO-HEAVY-DUTY-LARGA-DURACION/" class="btn">Ver</a>
-                            <a href="DISPERLUB-ANTICONGELANTE-REFRIGERANTE-AMARILLO-HEAVY-DUTY-LARGA-DURACION/" download="Ficha Técnica - Disperlub™ Anticongelante y Refrigerante Amarillo – Heavy Duty (Larga Duración)" class="btn">Ficha Técnica</a>
+                             <a href="DISPERLUB-ANTICONGELANTE-REFRIGERANTE-AMARILLO-HEAVY-DEUTY-LARGA-DURACION/index.html" class="btn">Ver</a>
+                            <!-- <a href="DISPERLUB-ANTICONGELANTE-REFRIGERANTE-AMARILLO-HEAVY-DEUTY-LARGA-DURACION/" download="Ficha Técnica - Disperlub™ Anticongelante y Refrigerante Amarillo – Heavy Duty (Larga Duración)" class="btn">Ficha Técnica</a> -->
                            </div>
                         </div>                        
                     </article>
@@ -639,7 +659,7 @@
                             <p class="texto">Tecnología de vanguardia para una protección extendida. Este refrigerante orgánico ofrece una durabilidad de hasta 5 años o 250,000 km, protegiendo los metales del sistema de enfriamiento contra la corrosión y la cavitación sin necesidad de aditivos adicionales.</p>
                            <div class="products-item-btn">
                              <a href="DISPERLUB-ANTICONGELANTE-REFRIGERANTE-TECNOLOGIA-ORGANICA-OAT-PROTECCION-LARGA-VIDA/" class="btn">Ver</a>
-                            <a href="DISPERLUB-ANTICONGELANTE-REFRIGERANTE-TECNOLOGIA-ORGANICA-OAT-PROTECCION-LARGA-VIDA/" download="Ficha Técnica - Disperlub™ Anticongelante y Refrigerante de Tecnología Orgánica (OAT) – Protección de Larga Vida" class="btn">Ficha Técnica</a>
+                            <!-- <a href="DISPERLUB-ANTICONGELANTE-REFRIGERANTE-TECNOLOGIA-ORGANICA-OAT-PROTECCION-LARGA-VIDA/" download="Ficha Técnica - Disperlub™ Anticongelante y Refrigerante de Tecnología Orgánica (OAT) – Protección de Larga Vida" class="btn">Ficha Técnica</a> -->
                            </div>
                         </div>                        
                     </article>
@@ -801,5 +821,7 @@
     </footer>
     <script src="../js/menu.js"></script>
     <script src="../js/slider.js"></script>
+    <script src="../js/whatsapp.js"></script>
+    <script src="../js/search.js"></script>
 </body>
 </html>
