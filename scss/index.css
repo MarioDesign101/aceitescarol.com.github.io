@@ -131,8 +131,7 @@ img {
   flex-wrap: nowrap;
   gap: 0px;
   background-image: linear-gradient(to top, #0c0a0a, transparent);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
 }
@@ -474,8 +473,7 @@ img {
     flex-wrap: wrap;
     gap: 0px;
     background-image: none;
-    -webkit-backdrop-filter: blur(0px);
-            backdrop-filter: blur(0px);
+    backdrop-filter: blur(0px);
     transform: translateX(0);
     transition: transform 0.3s ease-in-out;
   }

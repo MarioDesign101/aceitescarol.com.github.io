@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -131,8 +132,7 @@ img {
   flex-wrap: nowrap;
   gap: 0px;
   background-image: linear-gradient(to top, #0c0a0a, transparent);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
 }
@@ -474,8 +474,7 @@ img {
     flex-wrap: wrap;
     gap: 0px;
     background-image: none;
-    -webkit-backdrop-filter: blur(0px);
-            backdrop-filter: blur(0px);
+    backdrop-filter: blur(0px);
     transform: translateX(0);
     transition: transform 0.3s ease-in-out;
   }
@@ -773,8 +772,7 @@ img {
   flex-wrap: nowrap;
   gap: 0px;
   background-image: linear-gradient(to top, #0c0a0a, transparent);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
 }
@@ -1116,8 +1114,7 @@ img {
     flex-wrap: wrap;
     gap: 0px;
     background-image: none;
-    -webkit-backdrop-filter: blur(0px);
-            backdrop-filter: blur(0px);
+    backdrop-filter: blur(0px);
     transform: translateX(0);
     transition: transform 0.3s ease-in-out;
   }
@@ -1339,8 +1336,7 @@ img {
   flex-wrap: nowrap;
   gap: 0px;
   background-image: linear-gradient(to bottom, #fff, transparent);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
 }
@@ -1499,6 +1495,76 @@ img {
 }
 .offers .header__info--item:nth-child(2) {
   display: none;
+}
+
+.whatsapp-floating-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: sans-serif;
+}
+
+.whatsapp-tooltip {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 12px 18px;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 15px;
+  max-width: 200px;
+  font-size: 14px;
+  line-height: 1.4;
+  position: relative;
+  opacity: 0; /* Oculta inicialmente */
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s; /* Animación de aparición */
+}
+
+.whatsapp-tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 25px;
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: #f0f0f0 transparent transparent;
+  display: block;
+  width: 0;
+}
+
+.whatsapp-tooltip.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.whatsapp-btn-circular {
+  background-color: #25d366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+  text-decoration: none;
+}
+
+.whatsapp-btn-circular:hover {
+  transform: scale(1.1);
+  background-color: #128c7e;
+}
+
+.whatsapp-icon {
+  width: 35px;
+  height: 35px;
+  fill: white;
 }
 
 main {
@@ -2156,8 +2222,7 @@ footer .copy .texto {
     flex-wrap: wrap;
     gap: 0px;
     background-image: none;
-    -webkit-backdrop-filter: blur(0px);
-            backdrop-filter: blur(0px);
+    backdrop-filter: blur(0px);
     transform: translateX(0);
     transition: transform 0.3s ease-in-out;
   }
@@ -2507,6 +2572,76 @@ footer .copy .texto {
     border-radius: 15px;
   }
 }
+.whatsapp-floating-container {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: sans-serif;
+}
+
+.whatsapp-tooltip {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 12px 18px;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 15px;
+  max-width: 200px;
+  font-size: 14px;
+  line-height: 1.4;
+  position: relative;
+  opacity: 0; /* Oculta inicialmente */
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s; /* Animación de aparición */
+}
+
+.whatsapp-tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 25px;
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: #f0f0f0 transparent transparent;
+  display: block;
+  width: 0;
+}
+
+.whatsapp-tooltip.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.whatsapp-btn-circular {
+  background-color: #25d366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+  text-decoration: none;
+}
+
+.whatsapp-btn-circular:hover {
+  transform: scale(1.1);
+  background-color: #128c7e;
+}
+
+.whatsapp-icon {
+  width: 35px;
+  height: 35px;
+  fill: white;
+}
+
 .active {
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -2616,55 +2751,50 @@ main .catalog .catalog__nav a {
 main .catalog .catalog__nav a:hover {
   color: rgb(51, 51, 51);
 }
-main .catalog .catalog__search {
-  width: 100%;
-  margin: 14px auto;
-  text-align: center;
+main .catalog .search-container {
+  max-width: 100%;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+main .catalog .search-container .search-box {
+  position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
-  align-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 0px;
-  background-color: #20304d;
-  padding: 45px 10px;
 }
-main .catalog .catalog__search input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px 0px 0px 5px;
-  font-size: 16px;
+main .catalog .search-container .search-box .search-icon {
+  position: absolute;
+  left: 20px;
+  font-size: 1.2rem;
+  color: rgba(17, 34, 51, 0.8);
+  pointer-events: none;
+}
+main .catalog .search-container .search-box #catalog-search {
+  width: 100%;
+  padding: 15px 20px 15px 50px;
+  font-size: 1.1rem;
+  border: 2px solid #123;
+  border-radius: 10px;
   outline: none;
-  width: 80%;
-  background-color: transparent;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
+  transition: 0.3s;
+  box-sizing: border-box;
 }
-main .catalog .catalog__search input[type=search]::-webkit-search-cancel-button {
-  cursor: pointer;
+main .catalog .search-container .search-box #catalog-search:focus {
+  box-shadow: 0 0 12px rgba(17, 34, 51, 0.25);
+  border-color: rgb(29.75, 59.5, 89.25);
 }
-main .catalog .catalog__search input::-moz-placeholder {
+main .catalog .search-container .search-box #catalog-search::-moz-placeholder {
   color: #999;
+  font-style: italic;
 }
-main .catalog .catalog__search input::placeholder {
+main .catalog .search-container .search-box #catalog-search::placeholder {
   color: #999;
+  font-style: italic;
 }
-main .catalog .catalog__search input:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-main .catalog .catalog__search button {
-  align-self: stretch;
-  width: auto;
-  border: 1px solid #ccc;
-  border-radius: 0px 5px 5px 0px;
-  width: 15%;
-  background-color: transparent;
-}
-main .catalog .catalog__search button i {
-  color: #fff;
+main .catalog .search-container #search-fallback {
+  text-align: center;
+  margin-top: 20px;
+  color: rgb(108, 0, 0);
+  font-weight: bold;
 }
 main .products__grid {
   width: 100%;
